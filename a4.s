@@ -12,7 +12,7 @@ _start:
 
      // Check for A grade
     CMP R5, R6
-    BLT check_b // if the comparission is less than 90 go to check b
+    BLT check_b // if the comparison is less than 90 go to check b
 
     LDR R1, =amessage
     LDR R2, =alen
@@ -21,7 +21,7 @@ _start:
     check_b:
     // Check for B grade
     CMP R5, R7
-    BLT check_c // if the comparission is less than 75 go to check c
+    BLT check_c // if the comparison is less than 75 go to check c
 
     LDR R1, =bmessage
     LDR R2, =blenn
@@ -30,11 +30,11 @@ _start:
     check_c:
     // Check for C grade
     CMP R5, R8
-    BLT print_fail // if the comparission is less than 50 go to print fail 
+    BLT print_fail // if the comparison is less than 50 go to print fail 
 
     LDR R1, =cmessage
     LDR R2, =clen
-    B print_message
+    B print_message 
 
     print_fail:
     LDR R1, =failmessage
